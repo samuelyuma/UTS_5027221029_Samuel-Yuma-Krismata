@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { api } from "@/lib/api";
 import { cn } from "@/lib/utils";
-import { TableData } from "@/types/DataTable";
+import { EmployeeWithId } from "@/types/Employee";
 
 import { AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Badge } from "../ui/badge";
@@ -60,7 +60,7 @@ export default function TableSection() {
 					</TableRow>
 				</TableHeader>
 				<TableBody>
-					{employeeData?.map((employee: TableData) => (
+					{employeeData?.map((employee: EmployeeWithId) => (
 						<TableRow key={employee._id}>
 							<TableCell className="flex items-center px-10 py-4">
 								<Avatar>

@@ -6,6 +6,7 @@ Website sederhana untuk melakukan operasi `CRUD` terhadap data karyawan dalam se
 
 -   NodeJS + Typescript
 -   grpc + protobuf
+-   MongoDB
 
 ## 🔧 Installation
 

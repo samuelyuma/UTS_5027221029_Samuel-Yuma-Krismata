@@ -8,6 +8,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { api } from "@/lib/api";
+import { Employee } from "@/types/Employee";
 
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "../ui/alert-dialog";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "../ui/dialog";
@@ -54,16 +55,6 @@ const field: FieldItem[] = [
 		label: "Status",
 	},
 ];
-
-type Employee = {
-	avatar: string;
-	name: string;
-	email: string;
-	phone: string;
-	role: string;
-	position: string;
-	status: string;
-};
 
 export const CellAction = ({ id }: EmployeeID) => {
 	const [updateModal, setUpdateModal] = useState(false);

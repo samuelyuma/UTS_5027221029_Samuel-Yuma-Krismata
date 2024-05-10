@@ -1,6 +1,6 @@
-import HeaderSection from "./components/display/header-section";
-import TableSection from "./components/display/table";
+import HeaderSection from "./components/display/header";
 import Navbar from "./components/navbar";
+import TableSection from "./components/table/table";
 import { Toaster } from "./components/ui/toaster";
 
 function App() {

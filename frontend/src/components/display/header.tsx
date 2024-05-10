@@ -3,6 +3,7 @@ import { Plus } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 import { api } from "@/lib/api";
+import { Employee } from "@/types/Employee";
 
 import { Button } from "../ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "../ui/dialog";
@@ -14,16 +15,6 @@ import { useToast } from "../ui/use-toast";
 type FieldItem = {
 	id: "name" | "role" | "avatar" | "email" | "phone" | "position" | "status";
 	label: string;
-};
-
-type Employee = {
-	avatar: string;
-	name: string;
-	email: string;
-	phone: string;
-	role: string;
-	position: string;
-	status: string;
 };
 
 const field: FieldItem[] = [
