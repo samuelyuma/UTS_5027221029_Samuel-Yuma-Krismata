@@ -39,13 +39,15 @@ const headers = [
 ];
 
 export default function TableSection() {
-	const { data: employeeData } = useQuery({
+	const { data: data } = useQuery({
 		queryKey: ["employee"],
 		queryFn: async () => {
 			const response = await api.get("/employee/");
-			return response.data?.employees;
+			return response?.data;
 		},
 	});
+
+	const employeeData = data?.employees;
 
 	return (
 		<div className="rounded-md border">

@@ -9,7 +9,7 @@ export default function Headers() {
 			<div className="h-16 flex items-center justify-between px-16">
 				<h1 className="font-bold text-xl">Slate Company.</h1>
 				<div className="flex items-center gap-4">
-					<a href="https://github.com">
+					<a href="https://github.com/samuelyuma/UTS_5027221029_Samuel-Yuma-Krismata">
 						<Button variant="outline" size="icon">
 							<GitHubLogoIcon className="h-[1.2rem] w-[1.2rem]" />
 						</Button>
