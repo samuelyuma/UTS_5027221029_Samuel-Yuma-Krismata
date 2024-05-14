@@ -1,4 +1,4 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Plus } from "lucide-react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
@@ -51,9 +51,12 @@ const field: FieldItem[] = [
 export default function HeaderSection() {
 	const { toast } = useToast();
 
+	const queryClient = useQueryClient();
+
 	const { mutate: handleCreateEmployee } = useMutation<Employee, unknown, FormData>({
 		mutationFn: (data) => api.post("/employee", data),
 		onSuccess: () => {
+			queryClient.invalidateQueries();
 			toast({
 				description: "Employee successfully created!",
 			});
